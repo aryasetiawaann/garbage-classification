@@ -4,7 +4,7 @@ const fileList = document.getElementById('fileList');
 let model;
 let classNames = [];
 
-web_url  = 'http://127.0.0.1:5500'
+web_url  = 'https://my-garbage.netlify.app/'
 async function  loadModel() {
     console.log("🔄 Loading model...");
     model = await tf.loadLayersModel(web_url + '/model/model.json');
