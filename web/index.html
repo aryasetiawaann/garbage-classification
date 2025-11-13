@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+  <title>Sistem Klasifikasi Sampah</title>
+</head>
+<body class="text-center p-14 bg-gray-200">
+  <h1 class="text-3xl font-bold text-blue-500">
+    Sistem Klasifikasi Sampah
+  </h1>
+
+  <div class="bg-white flex justify-between w-[800px] mx-auto mt-8 p-5 rounded-2xl shadow-md">
+    <!-- Upload Box -->
+    <div 
+      id="dropZone"
+      class="flex flex-col items-center justify-center w-[350px] h-[350px] border-2 border-dashed border-gray-400 rounded-xl hover:border-blue-500 transition bg-gray-50"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0l-3 3m3-3l3 3M17 8v12m0 0l-3-3m3 3l3-3" />
+      </svg>
+      <p class="text-gray-600">Drag and Drop files to upload</p>
+      <p class="text-gray-400 text-sm mt-1">or</p>
+      <label class="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer hover:bg-blue-600 transition">
+        Browse
+        <input id="fileInput" type="file" accept="image/*" class="hidden" />
+      </label>
+      <p class="text-xs text-gray-400 mt-2">Supported: JPG, PNG</p>
+    </div>
+
+    <!-- History Box -->
+    <div class="w-[380px] text-left">
+      <h2 class="text-lg font-semibold mb-3">Histori Klasifikasi</h2>
+      <ul id="fileList" class="space-y-3 text-sm h-[300px]  overflow-y-auto">
+        <!-- Hasil upload akan muncul di sini -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
